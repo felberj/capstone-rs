@@ -9,7 +9,7 @@ version = "0.0.6"
 
 [dependencies]
 libc = "0.2"
-capstone-sys = "0.3.0"
+capstone-sys =  {git = "https://github.com/felberj/capstone-sys.git", rev = "0b7cf9e72f7136ba7d49bdf6370fb5ac77b2ada4"}
 
 # Not actually a dependency, but this makes the more complicated examples work
 [dev-dependencies]
@@ -17,6 +17,5 @@ macho = "0.*"
 
 [features]
 default = []
-use_bundled_capstone_bindings = ["capstone-sys/use_bundled_capstone_bindings"]
 use_system_capstone = ["capstone-sys/use_system_capstone"]
 build_capstone_cmake = ["capstone-sys/build_capstone_cmake"]
